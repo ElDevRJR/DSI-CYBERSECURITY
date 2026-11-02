@@ -1,0 +1,6 @@
+{
+  "name": "DSI Cybersecurity",
+  "description": "Ciberseguridad y continuidad empresarial para organizaciones que no pueden detenerse. Protección de información, prevención de amenazas y resiliencia digital.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
