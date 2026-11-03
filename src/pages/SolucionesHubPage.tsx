@@ -16,13 +16,9 @@ export const SolucionesHubPage: React.FC<SolucionesHubPageProps> = ({ onOpenEval
   return (
     <PageTransition>
       <div className="w-full bg-white">
-        {/* =========================================================================
-            HERO SOLUCIONES
-           ========================================================================= */}
         <section className="relative pt-6 pb-20 md:pt-10 md:pb-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-[560px] flex flex-col justify-end p-8 sm:p-12 lg:p-16 shadow-2xl border border-slate-800/40">
-              {/* Background Photography with Scale Reveal */}
               <div className="absolute inset-0 z-0">
                 <motion.img
                   src="/assets/images/hero_datacenter_panorama.jpg"
@@ -36,7 +32,6 @@ export const SolucionesHubPage: React.FC<SolucionesHubPageProps> = ({ onOpenEval
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101C32] via-[#101C32]/80 to-transparent" />
               </div>
 
-              {/* Overlaid Hero Content */}
               <div className="relative z-10 max-w-3xl space-y-5">
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
@@ -72,9 +67,6 @@ export const SolucionesHubPage: React.FC<SolucionesHubPageProps> = ({ onOpenEval
           </div>
         </section>
 
-        {/* =========================================================================
-            LAS 4 LÍNEAS DE SOLUCIONES (Editorial Photography Showcase)
-           ========================================================================= */}
         <section className="py-20 md:py-28 bg-[#F8FAFC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
@@ -109,7 +101,6 @@ export const SolucionesHubPage: React.FC<SolucionesHubPageProps> = ({ onOpenEval
                       isEven ? '' : 'lg:flex-row-reverse'
                     }`}
                   >
-                    {/* Photo Column with RevealImage */}
                     <div className={`lg:col-span-6 ${isEven ? 'order-1' : 'order-1 lg:order-2'}`}>
                       <RevealImage
                         src={sol.image}
@@ -119,7 +110,6 @@ export const SolucionesHubPage: React.FC<SolucionesHubPageProps> = ({ onOpenEval
                       />
                     </div>
 
-                    {/* Content Column */}
                     <div className={`lg:col-span-6 space-y-5 ${isEven ? 'order-2' : 'order-2 lg:order-1'}`}>
                       <ScrollReveal delay={0.1}>
                         <span className="text-xs font-mono font-bold text-[#176BFF] uppercase tracking-wider">
@@ -172,9 +162,6 @@ export const SolucionesHubPage: React.FC<SolucionesHubPageProps> = ({ onOpenEval
           </div>
         </section>
 
-        {/* =========================================================================
-            FINAL CTA SOLUCIONES
-           ========================================================================= */}
         <section className="py-20 bg-white border-t border-slate-100">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             <ScrollReveal delay={0.05}>

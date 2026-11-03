@@ -61,15 +61,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
   return (
     <PageTransition>
       <div className="w-full overflow-hidden bg-white">
-        {/* =========================================================================
-            SECCIÓN 01 — HERO PRINCIPAL
-            (Entrada cinematográfica: Scale reveal de foto + Blur to focus en texto + Stagger)
-           ========================================================================= */}
         <section className="relative pt-6 pb-20 md:pt-10 md:pb-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Main Cinematic Hero Frame */}
             <div className="relative rounded-3xl overflow-hidden min-h-[620px] lg:min-h-[700px] flex flex-col justify-between shadow-2xl border border-slate-800/40">
-              {/* Background Full Photography with Scale Reveal */}
               <div className="absolute inset-0 z-0">
                 <motion.img
                   src="/assets/images/hero_datacenter_panorama.jpg"
@@ -80,12 +74,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                   className="w-full h-full object-cover object-center filter brightness-95 contrast-105 will-change-transform"
                   referrerPolicy="no-referrer"
                 />
-                {/* Cinematic Scrim */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101C32] via-[#101C32]/75 to-[#101C32]/35" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#101C32]/90 via-[#101C32]/60 to-transparent" />
               </div>
 
-              {/* Top Bar inside the Hero Frame */}
               <motion.div
                 initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -106,7 +98,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                 </div>
               </motion.div>
 
-              {/* Central Typography & Action with Blur to Focus */}
               <div className="relative z-10 px-6 sm:px-10 lg:px-14 py-8 max-w-4xl space-y-6">
                 <div className="space-y-4">
                   <motion.div
@@ -147,7 +138,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                   </motion.p>
                 </div>
 
-                {/* Action Buttons with Microinteractions */}
                 <motion.div
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -175,7 +165,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                 </motion.div>
               </div>
 
-              {/* Bottom Floating Telemetry Strip Integrated on Image */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -216,10 +205,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
           </div>
         </section>
 
-        {/* =========================================================================
-            SECCIÓN 02 — CONFIANZA
-            (Stagger reveal en tarjetas + Blur to focus en título)
-           ========================================================================= */}
         <section className="py-20 md:py-28 bg-white border-b border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
@@ -244,7 +229,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
               </ScrollReveal>
             </div>
 
-            {/* 4 Concept Pillars with StaggerContainer */}
             <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.12}>
               <StaggerItem>
                 <motion.div
@@ -329,10 +313,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
           </div>
         </section>
 
-        {/* =========================================================================
-            SECCIÓN 03 — SOLUCIONES
-            (Reveal progresivo en tarjetas de soluciones con hover cinematográfico)
-           ========================================================================= */}
         <section id="soluciones" className="py-20 md:py-32 bg-[#F8FAFC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
@@ -355,7 +335,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
               </ScrollReveal>
             </div>
 
-            {/* 4 Cards Grid with Staggered ScrollReveal */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {SOLUTIONS_DATA.map((sol, idx) => (
                 <ScrollReveal key={sol.id} delay={idx * 0.1} yOffset={30}>
@@ -365,7 +344,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                     className="group bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between h-full"
                   >
                     <div>
-                      {/* Hero Photography for each Solution with Scale Zoom on hover */}
                       <div className="relative h-64 sm:h-72 w-full overflow-hidden">
                         <motion.img
                           src={sol.image}
@@ -391,7 +369,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                         </div>
                       </div>
 
-                      {/* Body Content */}
                       <div className="p-6 sm:p-8">
                         <p className="text-sm text-slate-600 leading-relaxed mb-6">
                           {sol.shortDesc}
@@ -410,7 +387,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                       </div>
                     </div>
 
-                    {/* Footer Action */}
                     <div className="px-6 pb-6 sm:px-8 sm:pb-8 flex items-center justify-between">
                       <Link
                         to={`/soluciones/${sol.slug}`}
@@ -434,10 +410,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
           </div>
         </section>
 
-        {/* =========================================================================
-            SECCIÓN 04 — PROCESO DE TRABAJO ("How We Work")
-            (Revelado con clip-path en imagen y selección interactiva)
-           ========================================================================= */}
         <section className="py-20 md:py-32 bg-[#101C32] text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
@@ -461,7 +433,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              {/* Left Column: Image with clip-path reveal */}
               <div className="lg:col-span-5 relative">
                 <RevealImage
                   src="/assets/images/datacenter_hallway_blue.jpg"
@@ -488,7 +459,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                 </motion.div>
               </div>
 
-              {/* Right Column: Step list */}
               <div className="lg:col-span-7 space-y-5">
                 {WORK_PROCESS_STEPS.map((step, idx) => (
                   <motion.div
@@ -520,14 +490,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
           </div>
         </section>
 
-        {/* =========================================================================
-            SECCIÓN 05 — BLOQUE VISUAL DE CONTINUIDAD
-            (Panorámica cinematográfica con Blur to focus en titular)
-           ========================================================================= */}
         <section className="py-20 md:py-32 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative rounded-3xl overflow-hidden min-h-[580px] lg:min-h-[640px] flex flex-col justify-between p-8 sm:p-12 lg:p-16 shadow-2xl border border-slate-800/40">
-              {/* Wide Datacenter Background with Scale Reveal */}
               <div className="absolute inset-0 z-0">
                 <motion.img
                   src="/assets/images/visual_continuity_superdatacenter.jpg"
@@ -542,7 +507,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101C32] via-[#101C32]/70 to-[#101C32]/40" />
               </div>
 
-              {/* Overlaid Header with BlurText */}
               <div className="relative z-10 max-w-3xl">
                 <ScrollReveal delay={0.05}>
                   <span className="inline-block px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-mono text-blue-200 mb-4">
@@ -565,7 +529,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                 </ScrollReveal>
               </div>
 
-              {/* 3 Floating Interactive Elements with Stagger */}
               <StaggerContainer className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 pt-10" staggerDelay={0.12}>
                 <StaggerItem>
                   <motion.div
@@ -610,10 +573,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
           </div>
         </section>
 
-        {/* =========================================================================
-            SECCIÓN 06 — NUESTRA PROPUESTA
-            (Alternancia fotográfica con Parallax reveal y Blur to focus)
-           ========================================================================= */}
         <section className="py-20 md:py-32 bg-[#F8FAFC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-20">
@@ -637,7 +596,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
             </div>
 
             <div className="space-y-24">
-              {/* Pilar 1: Protección Inteligente */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                 <div className="lg:col-span-6">
                   <RevealImage
@@ -666,7 +624,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                 </div>
               </div>
 
-              {/* Pilar 2: Continuidad Empresarial (Alternated Layout) */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                 <div className="lg:col-span-6 order-2 lg:order-1 space-y-4">
                   <ScrollReveal delay={0.1}>
@@ -695,7 +652,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
                 </div>
               </div>
 
-              {/* Pilar 3: Seguridad Escalable */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                 <div className="lg:col-span-6">
                   <RevealImage
@@ -727,10 +683,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
           </div>
         </section>
 
-        {/* =========================================================================
-            SECCIÓN 07 — SECTORES
-            (Cascada escalonada con microinteracciones de hover)
-           ========================================================================= */}
         <section className="py-20 md:py-32 bg-white border-t border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
@@ -802,10 +754,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
           </div>
         </section>
 
-        {/* =========================================================================
-            SECCIÓN 08 — PREGUNTAS FRECUENTES
-            (Acordeón animado con AnimatePresence para apertura y cierre fluido)
-           ========================================================================= */}
         <section className="py-20 md:py-32 bg-[#F8FAFC] border-t border-slate-200/80">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-16">
@@ -871,15 +819,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEvaluation }) => {
           </div>
         </section>
 
-        {/* =========================================================================
-            SECCIÓN 09 — CTA FINAL
-            (Impacto visual cinematográfico con microinteracciones)
-           ========================================================================= */}
         <section className="py-20 md:py-32 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal yOffset={30}>
               <div className="relative rounded-3xl overflow-hidden min-h-[460px] flex items-center justify-center text-center p-8 sm:p-16 shadow-2xl border border-slate-800">
-                {/* Background Datacenter Image with Deep Corporate Blue Scrim */}
                 <div className="absolute inset-0 z-0">
                   <img
                     src="/assets/images/hero_datacenter_panorama.jpg"

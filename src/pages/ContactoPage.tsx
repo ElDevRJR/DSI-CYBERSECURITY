@@ -33,7 +33,6 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({ onOpenEvaluation }) 
     e.preventDefault();
     setFormStatus({ submitted: false, validating: true, error: null });
 
-    // Client-side validation
     if (!form.nombre.trim() || !form.empresa.trim() || !form.email.trim() || !form.telefono.trim()) {
       setFormStatus({
         submitted: false,
@@ -43,7 +42,6 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({ onOpenEvaluation }) 
       return;
     }
 
-    // Email format validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(form.email)) {
       setFormStatus({
@@ -54,7 +52,6 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({ onOpenEvaluation }) 
       return;
     }
 
-    // Prepared for backend integration:
     fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -75,13 +72,9 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({ onOpenEvaluation }) 
   return (
     <PageTransition>
       <div className="w-full bg-white">
-        {/* =========================================================================
-            HERO CONTACTO
-           ========================================================================= */}
         <section className="relative pt-6 pb-20 md:pt-10 md:pb-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative rounded-3xl overflow-hidden min-h-[460px] lg:min-h-[520px] flex flex-col justify-end p-8 sm:p-12 lg:p-16 shadow-2xl border border-slate-800/40">
-              {/* Background Photography with smooth entrance scale */}
               <div className="absolute inset-0 z-0 overflow-hidden">
                 <motion.img
                   initial={{ scale: 1.12, opacity: 0.6 }}
@@ -95,7 +88,6 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({ onOpenEvaluation }) 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101C32] via-[#101C32]/80 to-transparent" />
               </div>
 
-              {/* Overlaid Hero Content */}
               <div className="relative z-10 max-w-3xl space-y-5">
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
@@ -133,9 +125,6 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({ onOpenEvaluation }) 
           </div>
         </section>
 
-        {/* =========================================================================
-            FORMULARIO ORIENTADO A CONVERSIÓN & CANALES DIRECTOS
-           ========================================================================= */}
         <section className="py-20 md:py-28 bg-[#F8FAFC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -200,7 +189,6 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({ onOpenEvaluation }) 
                   </motion.div>
                 </div>
 
-                {/* Fast Diagnostic Modal Option */}
                 <div className="p-6 rounded-3xl bg-[#101C32] text-white border border-slate-800 space-y-3">
                   <span className="text-xs font-mono text-emerald-400">Diagnóstico Guiado</span>
                   <h3 className="text-lg font-bold font-display">¿Prefiere agendar directamente en calendario?</h3>
@@ -218,7 +206,6 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({ onOpenEvaluation }) 
                 </div>
               </ScrollReveal>
 
-              {/* Right Form Column */}
               <ScrollReveal direction="up" delay={0.15} duration={0.7} className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xl">
                 <BlurText
                   text="Formulario de Evaluación Técnica"

@@ -27,13 +27,9 @@ export const NosotrosPage: React.FC<NosotrosPageProps> = ({ onOpenEvaluation }) 
   return (
     <PageTransition>
       <div className="w-full bg-white">
-        {/* =========================================================================
-            HERO VISUAL CON FOTOGRAFÍA TECNOLÓGICA AMPLIA & BLUR TO FOCUS
-           ========================================================================= */}
         <section className="relative pt-6 pb-20 md:pt-10 md:pb-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-[560px] flex flex-col justify-end p-8 sm:p-12 lg:p-16 shadow-2xl border border-slate-800/40">
-              {/* Background Photography with Scale Reveal */}
               <div className="absolute inset-0 z-0">
                 <motion.img
                   src="/assets/images/sol_governance_board.jpg"
@@ -47,7 +43,6 @@ export const NosotrosPage: React.FC<NosotrosPageProps> = ({ onOpenEvaluation }) 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101C32] via-[#101C32]/80 to-transparent" />
               </div>
 
-              {/* Overlaid Hero Content */}
               <div className="relative z-10 max-w-3xl space-y-5">
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
@@ -83,9 +78,6 @@ export const NosotrosPage: React.FC<NosotrosPageProps> = ({ onOpenEvaluation }) 
           </div>
         </section>
 
-        {/* =========================================================================
-            PRESENTACIÓN DE DSI CYBERSECURITY & NUESTRA VISIÓN
-           ========================================================================= */}
         <section className="py-20 md:py-28 bg-white border-b border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -124,9 +116,6 @@ export const NosotrosPage: React.FC<NosotrosPageProps> = ({ onOpenEvaluation }) 
           </div>
         </section>
 
-        {/* =========================================================================
-            ENFOQUE EN CONTINUIDAD EMPRESARIAL
-           ========================================================================= */}
         <section className="py-20 md:py-28 bg-[#F8FAFC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
@@ -203,9 +192,6 @@ export const NosotrosPage: React.FC<NosotrosPageProps> = ({ onOpenEvaluation }) 
           </div>
         </section>
 
-        {/* =========================================================================
-            PRINCIPIOS QUE GUÍAN NUESTRO TRABAJO
-           ========================================================================= */}
         <section className="py-20 md:py-28 bg-white border-t border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
@@ -267,9 +253,6 @@ export const NosotrosPage: React.FC<NosotrosPageProps> = ({ onOpenEvaluation }) 
           </div>
         </section>
 
-        {/* =========================================================================
-            CTA PARA CONOCER NUESTRAS SOLUCIONES
-           ========================================================================= */}
         <section className="py-20 md:py-28 bg-[#101C32] text-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             <ScrollReveal delay={0.05}>

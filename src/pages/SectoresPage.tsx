@@ -32,13 +32,9 @@ export const SectoresPage: React.FC<SectoresPageProps> = ({ onOpenEvaluation }) 
   return (
     <PageTransition>
       <div className="w-full bg-white">
-        {/* =========================================================================
-            HERO SECTORES
-           ========================================================================= */}
         <section className="relative pt-6 pb-20 md:pt-10 md:pb-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-[560px] flex flex-col justify-end p-8 sm:p-12 lg:p-16 shadow-2xl border border-slate-800/40">
-              {/* Background Photography with Scale Reveal */}
               <div className="absolute inset-0 z-0">
                 <motion.img
                   src="/assets/images/sector_datacenter.jpg"
@@ -52,7 +48,6 @@ export const SectoresPage: React.FC<SectoresPageProps> = ({ onOpenEvaluation }) 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101C32] via-[#101C32]/80 to-transparent" />
               </div>
 
-              {/* Overlaid Hero Content */}
               <div className="relative z-10 max-w-3xl space-y-5">
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
@@ -88,9 +83,6 @@ export const SectoresPage: React.FC<SectoresPageProps> = ({ onOpenEvaluation }) 
           </div>
         </section>
 
-        {/* =========================================================================
-            GALERÍA DE SECTORES CON FOTOGRAFÍA REPRESENTATIVA & STAGGER
-           ========================================================================= */}
         <section className="py-20 md:py-28 bg-[#F8FAFC]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
@@ -115,7 +107,6 @@ export const SectoresPage: React.FC<SectoresPageProps> = ({ onOpenEvaluation }) 
               </ScrollReveal>
             </div>
 
-            {/* Sectors Grid with StaggerContainer */}
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.1}>
               {SECTORS_DATA.map((sector) => (
                 <StaggerItem key={sector.id}>
@@ -179,9 +170,6 @@ export const SectoresPage: React.FC<SectoresPageProps> = ({ onOpenEvaluation }) 
           </div>
         </section>
 
-        {/* =========================================================================
-            CTA SECTORES
-           ========================================================================= */}
         <section className="py-20 bg-white border-t border-slate-100">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             <ScrollReveal delay={0.05}>

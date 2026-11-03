@@ -30,13 +30,11 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ onOpenEvaluation
     return <Navigate to="/soluciones" replace />;
   }
 
-  // Other solutions for the cross-links
   const otherSolutions = SOLUTIONS_DATA.filter((s) => s.slug !== slug);
 
   return (
     <PageTransition>
       <div className="w-full bg-[#F8FAFC]">
-        {/* Breadcrumb Header */}
         <div className="bg-white border-b border-slate-200/80 py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-xs text-slate-500">
             <Link to="/" className="hover:text-[#176BFF]">Inicio</Link>
@@ -47,11 +45,9 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ onOpenEvaluation
           </div>
         </div>
 
-        {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#F5F7FA] border-b border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              {/* Left Content */}
               <div className="lg:col-span-7 space-y-5">
                 <motion.div
                   initial={{ opacity: 0, y: -8 }}
@@ -116,7 +112,6 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ onOpenEvaluation
                 </motion.div>
               </div>
 
-              {/* Right Visual: Large Professional Photograph with RevealImage */}
               <div className="lg:col-span-5">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 h-[380px] sm:h-[440px] group">
                   <RevealImage
@@ -138,7 +133,6 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ onOpenEvaluation
           </div>
         </section>
 
-        {/* Metrics Row */}
         <section className="py-10 bg-white border-b border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6" staggerDelay={0.08}>
@@ -158,11 +152,9 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ onOpenEvaluation
           </div>
         </section>
 
-        {/* Key Features & Architecture */}
         <section id="especificaciones" className="py-20 bg-[#F5F7FA]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-              {/* Left: Bullet Points & Capabilities */}
               <div className="lg:col-span-7 space-y-6">
                 <div>
                   <ScrollReveal delay={0.05}>
@@ -189,7 +181,6 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ onOpenEvaluation
                 </div>
               </div>
 
-              {/* Right: Deliverables & Implementation */}
               <div className="lg:col-span-5">
                 <ScrollReveal delay={0.15}>
                   <div className="bg-[#101C32] text-white rounded-3xl p-7 sm:p-8 shadow-xl border border-slate-800 space-y-5">
@@ -226,7 +217,6 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ onOpenEvaluation
           </div>
         </section>
 
-        {/* Solution FAQs with AnimatePresence */}
         <section className="py-16 bg-white border-t border-slate-200/80">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
@@ -278,7 +268,6 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ onOpenEvaluation
           </div>
         </section>
 
-        {/* Other Solutions Navigator */}
         <section className="py-16 bg-[#F5F7FA] border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal delay={0.05}>
