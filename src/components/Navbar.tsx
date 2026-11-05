@@ -28,7 +28,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEvaluation }) => {
   return (
     <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-8 px-4 sm:px-6 lg:px-8 h-20">
-        {/* Zone 1: Brand Wordmark */}
         <Link
           to="/"
           className="flex items-center gap-2.5 text-slate-900 font-extrabold tracking-tight whitespace-nowrap shrink-0 group"
@@ -41,7 +40,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEvaluation }) => {
           </span>
         </Link>
 
-        {/* Zone 2: 5 Clean Nav Links for Multi-Page Architecture */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
           {navLinks.map((link) => {
             const active = isLinkActive(link.path);
@@ -64,7 +62,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEvaluation }) => {
           })}
         </nav>
 
-        {/* Zone 3: 1 Primary Action */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
           <button
             onClick={onOpenEvaluation}
@@ -74,7 +71,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEvaluation }) => {
           </button>
         </div>
 
-        {/* Mobile Hamburger Button */}
         <div className="flex md:hidden items-center gap-2">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -86,7 +82,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEvaluation }) => {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-xl">
           <nav className="flex flex-col space-y-3">

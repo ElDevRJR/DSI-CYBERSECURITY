@@ -45,7 +45,6 @@ export const EvaluationModal: React.FC<EvaluationModalProps> = ({
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -54,7 +53,6 @@ export const EvaluationModal: React.FC<EvaluationModalProps> = ({
             className="fixed inset-0 bg-[#101C32]/60 backdrop-blur-sm"
           />
 
-          {/* Modal Container */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -62,7 +60,6 @@ export const EvaluationModal: React.FC<EvaluationModalProps> = ({
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-slate-200/80 overflow-hidden z-10"
           >
-            {/* Header */}
             <div className="px-6 py-5 sm:px-8 bg-gradient-to-b from-[#F5F7FA] to-white border-b border-slate-100 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-[#176BFF]/10 text-[#176BFF] flex items-center justify-center font-bold">
@@ -82,7 +79,6 @@ export const EvaluationModal: React.FC<EvaluationModalProps> = ({
               </button>
             </div>
 
-            {/* Content */}
             <div className="p-6 sm:p-8">
               {isSubmitted ? (
                 <div className="text-center py-6">

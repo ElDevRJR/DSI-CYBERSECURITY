@@ -24,27 +24,14 @@ const AnimatedRoutes: React.FC<AnimatedRoutesProps> = ({ onOpenEvaluation }) => 
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        {/* Página 1: Inicio */}
         <Route path="/" element={<HomePage onOpenEvaluation={onOpenEvaluation} />} />
-
-        {/* Página 2: Nosotros */}
         <Route path="/nosotros" element={<NosotrosPage onOpenEvaluation={() => onOpenEvaluation('general')} />} />
-
-        {/* Página 3: Soluciones (Hub + Subpáginas Dedicadas) */}
         <Route path="/soluciones" element={<SolucionesHubPage onOpenEvaluation={onOpenEvaluation} />} />
         <Route path="/soluciones/:slug" element={<SolutionDetail onOpenEvaluation={onOpenEvaluation} />} />
-
-        {/* Redirecciones de compatibilidad para variantes de slug */}
         <Route path="/soluciones/ciberseguridad-empresarial" element={<Navigate to="/soluciones/ciberseguridad" replace />} />
         <Route path="/soluciones/continuidad-negocio" element={<Navigate to="/soluciones/continuidad" replace />} />
-
-        {/* Página 4: Sectores */}
         <Route path="/sectores" element={<SectoresPage onOpenEvaluation={() => onOpenEvaluation('general')} />} />
-
-        {/* Página 5: Contacto */}
         <Route path="/contacto" element={<ContactoPage onOpenEvaluation={() => onOpenEvaluation('general')} />} />
-
-        {/* 404 Personalizada */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </AnimatePresence>

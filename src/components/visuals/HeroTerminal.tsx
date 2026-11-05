@@ -24,17 +24,14 @@ export const HeroTerminal: React.FC = () => {
 
   return (
     <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
-      {/* Background Soft Glow */}
       <div className="absolute -inset-4 bg-gradient-to-tr from-[#176BFF]/20 via-[#102A56]/10 to-transparent rounded-3xl blur-2xl -z-10" />
 
-      {/* Main Terminal Frame */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="relative bg-[#101C32] text-white rounded-3xl p-5 sm:p-6 shadow-2xl border border-slate-700/60 overflow-hidden"
       >
-        {/* Terminal Top Bar */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-800">
           <div className="flex items-center gap-2.5">
             <div className="flex items-center gap-1.5">
@@ -51,7 +48,6 @@ export const HeroTerminal: React.FC = () => {
           </div>
         </div>
 
-        {/* Tab Controls */}
         <div className="flex items-center gap-1.5 p-1 bg-slate-900/80 rounded-xl my-4 border border-slate-800">
           <button
             onClick={() => setActiveTab('backup')}
@@ -85,7 +81,6 @@ export const HeroTerminal: React.FC = () => {
           </button>
         </div>
 
-        {/* Dynamic Display Area */}
         {activeTab === 'backup' && (
           <div className="space-y-4">
             <div className="bg-slate-900/60 rounded-2xl p-4 border border-slate-800/80">
@@ -97,7 +92,6 @@ export const HeroTerminal: React.FC = () => {
                 <span className="text-xs font-mono text-emerald-400">Inmutable (WORM)</span>
               </div>
 
-              {/* Progress bar */}
               <div className="space-y-1.5">
                 <div className="flex justify-between text-[11px] text-slate-400">
                   <span>Replicación síncrona geo-distribuida</span>
@@ -127,7 +121,6 @@ export const HeroTerminal: React.FC = () => {
               </div>
             </div>
 
-            {/* Live Chart Line */}
             <div className="bg-slate-900/40 rounded-2xl p-3 border border-slate-800/60">
               <div className="flex justify-between items-center mb-1 text-xs">
                 <span className="text-slate-400">Integridad de bloques de copia</span>
@@ -237,7 +230,6 @@ export const HeroTerminal: React.FC = () => {
           </div>
         )}
 
-        {/* Bottom Status Row */}
         <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
           <div className="flex items-center gap-1.5">
             <Lock className="w-3.5 h-3.5 text-[#176BFF]" />
@@ -247,7 +239,6 @@ export const HeroTerminal: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Floating Card 1 (Top Right) - Inspired by AdScale floating cards */}
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -263,7 +254,6 @@ export const HeroTerminal: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Floating Card 2 (Bottom Left) - Inspired by AdScale Shopify badge */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}

@@ -11,7 +11,6 @@ export const ContinuityGraphic: React.FC<ContinuityGraphicProps> = ({ onSelectAc
 
   return (
     <div className="relative w-full rounded-3xl overflow-hidden bg-gradient-to-b from-[#101C32] via-[#102A56] to-[#0A162B] text-white p-6 sm:p-10 lg:p-14 border border-slate-700/60 shadow-2xl">
-      {/* Background Architectural Datacenter Graphics */}
       <div className="absolute inset-0 pointer-events-none opacity-25">
         <svg className="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
           <defs>
@@ -30,11 +29,9 @@ export const ContinuityGraphic: React.FC<ContinuityGraphicProps> = ({ onSelectAc
         </svg>
       </div>
 
-      {/* Decorative Ambient Light Cones */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#176BFF]/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Content Layer */}
       <div className="relative z-10 max-w-4xl mx-auto text-center mb-10">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs text-blue-200 mb-4">
           <Activity className="w-3.5 h-3.5 text-emerald-400" />
@@ -50,9 +47,7 @@ export const ContinuityGraphic: React.FC<ContinuityGraphicProps> = ({ onSelectAc
         </p>
       </div>
 
-      {/* 3 Core Interactive Floating Pillars: Prevención, Respaldo, Recuperación */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        {/* Pillar 1: Prevención */}
         <motion.div
           whileHover={{ y: -4 }}
           onClick={() => setActiveElement('prevencion')}
@@ -78,7 +73,6 @@ export const ContinuityGraphic: React.FC<ContinuityGraphicProps> = ({ onSelectAc
           </div>
         </motion.div>
 
-        {/* Pillar 2: Respaldo */}
         <motion.div
           whileHover={{ y: -4 }}
           onClick={() => setActiveElement('respaldo')}
@@ -104,7 +98,6 @@ export const ContinuityGraphic: React.FC<ContinuityGraphicProps> = ({ onSelectAc
           </div>
         </motion.div>
 
-        {/* Pillar 3: Recuperación */}
         <motion.div
           whileHover={{ y: -4 }}
           onClick={() => setActiveElement('recuperacion')}
@@ -131,7 +124,6 @@ export const ContinuityGraphic: React.FC<ContinuityGraphicProps> = ({ onSelectAc
         </motion.div>
       </div>
 
-      {/* Simulated Infrastructure Rack Telemetry Footer Strip */}
       <div className="relative z-10 mt-8 pt-6 border-t border-white/10 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5">

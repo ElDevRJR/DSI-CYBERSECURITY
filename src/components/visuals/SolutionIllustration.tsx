@@ -9,7 +9,6 @@ export const SolutionIllustration: React.FC<SolutionIllustrationProps> = ({ type
   if (type === 'proteccion-informacion') {
     return (
       <div className="relative w-full h-48 bg-gradient-to-br from-[#102A56] via-[#101C32] to-[#0D1527] rounded-2xl p-4 overflow-hidden flex flex-col justify-between border border-slate-700/50">
-        {/* Subtle grid pattern */}
         <div className="absolute inset-0 bg-[radial-gradient(#176BFF_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
 
         <div className="relative z-10 flex items-center justify-between">
@@ -22,7 +21,6 @@ export const SolutionIllustration: React.FC<SolutionIllustrationProps> = ({ type
           </span>
         </div>
 
-        {/* Central Graphic: Server & Cloud Backup Bridge */}
         <div className="relative z-10 grid grid-cols-3 gap-2 items-center my-auto">
           <div className="bg-white/10 backdrop-blur-md rounded-xl p-2.5 text-center border border-white/15">
             <Server className="w-5 h-5 mx-auto text-blue-300 mb-1" />
@@ -69,7 +67,6 @@ export const SolutionIllustration: React.FC<SolutionIllustrationProps> = ({ type
           </span>
         </div>
 
-        {/* Central Shield Pulse */}
         <div className="relative z-10 flex items-center justify-center my-auto py-2">
           <div className="relative flex items-center justify-center">
             <div className="absolute w-20 h-20 rounded-full border border-blue-400/20 animate-ping" />
@@ -117,7 +114,6 @@ export const SolutionIllustration: React.FC<SolutionIllustrationProps> = ({ type
           </span>
         </div>
 
-        {/* Central Graphic: High Availability Mirror */}
         <div className="relative z-10 my-auto py-2">
           <div className="flex items-center justify-between px-2">
             <div className="bg-white/10 backdrop-blur-md p-2.5 rounded-xl border border-white/15 text-center flex-1">
@@ -147,7 +143,6 @@ export const SolutionIllustration: React.FC<SolutionIllustrationProps> = ({ type
     );
   }
 
-  // gestion-seguridad
   return (
     <div className="relative w-full h-48 bg-gradient-to-br from-[#101C32] via-[#102A56] to-[#0A162B] rounded-2xl p-4 overflow-hidden flex flex-col justify-between border border-slate-700/50">
       <div className="absolute inset-0 bg-[radial-gradient(#176BFF_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none" />
@@ -162,7 +157,6 @@ export const SolutionIllustration: React.FC<SolutionIllustrationProps> = ({ type
         </span>
       </div>
 
-      {/* Central Graphic: Key Vault & Roles */}
       <div className="relative z-10 my-auto py-2">
         <div className="bg-slate-900/60 rounded-xl p-3 border border-slate-700/60 space-y-2">
           <div className="flex items-center justify-between text-xs">

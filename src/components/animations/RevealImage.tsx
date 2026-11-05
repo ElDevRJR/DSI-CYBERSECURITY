@@ -94,7 +94,6 @@ export const RevealImage: React.FC<RevealImageProps> = ({
     );
   }
 
-  // Default: Scale reveal
   return (
     <motion.div
       ref={containerRef}
