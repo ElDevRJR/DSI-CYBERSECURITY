@@ -12,6 +12,9 @@ import { SolucionesHubPage } from './pages/SolucionesHubPage';
 import { SolutionDetail } from './pages/SolutionDetail';
 import { SectoresPage } from './pages/SectoresPage';
 import { ContactoPage } from './pages/ContactoPage';
+import PrivacidadPage from './pages/PrivacidadPage';
+import TerminosPage from './pages/TerminosPage';
+import CumplimientoPage from './pages/CumplimientoPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 interface AnimatedRoutesProps {
@@ -33,6 +36,12 @@ const AnimatedRoutes: React.FC<AnimatedRoutesProps> = ({ onOpenEvaluation }) => 
         <Route path="/sectores" element={<SectoresPage onOpenEvaluation={() => onOpenEvaluation('general')} />} />
         <Route path="/contacto" element={<ContactoPage onOpenEvaluation={() => onOpenEvaluation('general')} />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/privacidad" element={<PrivacidadPage />} />
+        <Route path="/terminos" element={<TerminosPage />} />
+        <Route
+          path="/cumplimiento-normativo"
+          element={<CumplimientoPage />}
+        />
       </Routes>
     </AnimatePresence>
   );

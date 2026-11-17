@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -44,7 +43,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEvaluation }) => {
     <footer className="bg-white border-t border-slate-200/80 pt-16 pb-12 text-slate-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Newsletter */}
         <div className="bg-[#F5F7FA] rounded-3xl p-8 sm:p-10 mb-16 border border-slate-200/80 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl text-center lg:text-left">
             <span className="text-xs font-bold uppercase tracking-wider text-[#176BFF]">
@@ -262,18 +260,41 @@ export const Footer: React.FC<FooterProps> = ({ onOpenEvaluation }) => {
 
         </div>
 
+        {/* Copyright y enlaces legales */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div>
+          <div className="text-center sm:text-left">
             © {new Date().getFullYear()} DSI CYBERSECURITY. Todos los derechos reservados.
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
-            <span>Privacidad de la Información</span>
-            <span>·</span>
-            <span>Términos del Servicio</span>
-            <span>·</span>
-            <span>Cumplimiento Normativo</span>
-          </div>
+          <nav
+            aria-label="Enlaces legales"
+            className="flex flex-wrap items-center justify-center gap-3 sm:gap-6"
+          >
+            <Link
+              to="/privacidad"
+              className="hover:text-[#176BFF] transition-colors"
+            >
+              Privacidad de la Información
+            </Link>
+
+            <span aria-hidden="true">·</span>
+
+            <Link
+              to="/terminos"
+              className="hover:text-[#176BFF] transition-colors"
+            >
+              Términos del Servicio
+            </Link>
+
+            <span aria-hidden="true">·</span>
+
+            <Link
+              to="/cumplimiento-normativo"
+              className="hover:text-[#176BFF] transition-colors"
+            >
+              Cumplimiento Normativo
+            </Link>
+          </nav>
         </div>
 
       </div>

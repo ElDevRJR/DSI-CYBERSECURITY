@@ -135,7 +135,7 @@ export const ContinuityGraphic: React.FC<ContinuityGraphicProps> = ({ onSelectAc
           <span>·</span>
           <span>Auditabilidad ISO 27001</span>
         </div>
-
+        
         <button
           onClick={() => onSelectAction && onSelectAction('continuidad-negocio')}
           className="text-xs text-blue-300 hover:text-white font-medium flex items-center gap-1 transition-colors"

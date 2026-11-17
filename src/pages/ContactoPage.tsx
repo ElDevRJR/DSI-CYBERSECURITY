@@ -447,7 +447,6 @@ export const ContactoPage: React.FC<ContactoPageProps> = ({
                       </div>
                     )}
 
-                    {/* NOMBRE Y EMPRESA */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
                       <div>

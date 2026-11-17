@@ -43,7 +43,6 @@ export const RevealImage: React.FC<RevealImageProps> = ({
     );
   }
 
-  // Animation variants
   if (variant === 'clip') {
     return (
       <motion.div
